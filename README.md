@@ -23,7 +23,7 @@ The way this converges to a better solution is fairly intuitive. We start with a
 
 ## Implementation and Usage
 
-All implemented functions are located in [functions.R](https://github.com/9Dread/evolutionary-algorithm-image-approximator/tree/main/functions.R). The main interface is [main.R](https://github.com/9Dread/evolutionary-algorithm-image-approximator/tree/main/main.R). Put simply, one provides a target image and runs the algorithm on it using the functions (the example shown at the top of this page is provided in main.R). Note that the resolution of the original image often must be drastically reduced because of computational costs. For instance, the image used in the example is 70 x 59 pixels. The resolution can be adjusted with the "resize" parameter of the readImage function. 
+All implemented functions are located in [functions.R](https://github.com/9Dread/evolutionary-algorithm-image-approximator/tree/main/functions.R). The main interface is [main.R](https://github.com/9Dread/evolutionary-algorithm-image-approximator/tree/main/main.R). Put simply, one provides a target image and runs the algorithm on it using the functions (the example shown at the top of this page is provided in main.R). Note that the resolution of the original image often must be drastically reduced because of computational costs. For instance, the image used in the example is 70 x 59 pixels after resolution reduction. The resolution can be adjusted with the "resize" parameter of the readImage function. 
 
 The design specifications behind the evolutionary algorithm are as follows:
 
