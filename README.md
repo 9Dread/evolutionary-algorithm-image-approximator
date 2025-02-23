@@ -1,5 +1,5 @@
 # evolutionary-algorithm-image-approximator
-Evolutionary Algorithm     |  Targeted Image [Ghost and Soap from COD MW2](https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_2#Remastered_version)
+Evolutionary Algorithm     |  Targeted Image ([Ghost and Soap from COD MW2](https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_2#Remastered_version))
 :-------------------------:|:-------------------------:
 <img src="https://github.com/9Dread/evolutionary-algorithm-image-approximator/blob/main/gifs/ghostsoap.gif" alt="Evolutionary algorithm gif" style="width:50%; height:auto;">  |  <img src="https://github.com/9Dread/evolutionary-algorithm-image-approximator/blob/main/ghostsoap.jpg" alt="Original image" style="width:50%; height:auto;">
 
