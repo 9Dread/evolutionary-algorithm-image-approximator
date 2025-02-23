@@ -47,7 +47,7 @@ Note that each pixel is a 3d vector/point in rgb space. Thus we can quantify how
 
 $$d_{ij} = \sqrt{\left( r_{ij} - r^0_{ij} \right)^2 + \left( g_{ij} - g^0_{ij} \right)^2 + \left( b - b^0_{ij} \right)^2}$$
 
-where $r_{ij}$, $g_{ij}$, $b_{ij}$ are the respective r, g, and b values of the pixel at position $i,j$ in the proposed image and $r^0_{ij}$, $g^0_{ij}$, $b^0_{ij}$ are the r, g, and b values of the matching pixel in the reference image. As the rgb values of the pixel between the proposed and reference image get closer, this distance decreases. The fitness function is the sum of this distance over all pixels, i.e.\
+where $r_{ij}$, $g_{ij}$, $b_{ij}$ are the respective r, g, and b values of the pixel at position $i,j$ in the proposed image and $r^0_{ij}$, $g^0_{ij}$, $b^0_{ij}$ are the r, g, and b values of the matching pixel in the reference image. As the rgb values of the pixel between the proposed and reference image get closer, this distance decreases. The fitness function is the sum of this distance over all pixels, i.e.
 
 $$\text{fit}=\sum_{i}^x \sum_{j}^y d_{ij}$$
 
