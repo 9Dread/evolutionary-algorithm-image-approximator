@@ -34,8 +34,13 @@ The algorithm is provided an array of dimension x * y * 3, since we have a 2d im
 ### Fitness Function
 The fitness function is designed to reach an optimum when the proposed image and the reference (user-provided) image are exactly alike. There are many ways to do this, but this implementation uses the sum of the pixel-wise euclidean distances between the proposed and reference image. 
 
-Note that each pixel is a 3d vector/point in rgb space. Thus we can quantify how similar each pixel is to its respective pixel in the reference image using the euclidean distance function:\
-$$d = \sqrt{\left( r - r_0 \right)^2 + \left( g - g_0 \right)^2 + \left( b - b_0 \right)^2}$$
+Note that each pixel is a 3d vector/point in rgb space. Thus we can quantify how similar each pixel is to its respective pixel in the reference image using the euclidean distance function. The pixel-wise distance is:\
+$$d_{ij} = \sqrt{\left( r_{ij} - r^0_{ij} \right)^2 + \left( g^0_{ij} - g_0 \right)^2 + \left( b - b^0_{ij} \right)^2}$$
+where $r_{ij}$, $g_{ij}$, $b_{ij}$ are the respective r, g, and b values of the pixel at position $i,j$ in the proposed image and $r^0_{ij}$, $g^0_{ij}$, $b^0_{ij}$ are the r, g, and b values of the matching pixel in the reference image. As the rgb values of the pixel between the proposed and reference image get closer, this distance decreases. The fitness function is the sum of this distance over all pixels, i.e.\
+$$\text{fit}=\sum_{i}^x \sum_{j}^y d_{ij}$$
+
+One small caveat is that the algorithm implemented here was designed to *maximize* the fitness value, not *minimize* it. Note that as it stands, this fitness function becomes smaller as the images become closer together (the distance will decrease for more similar images). Thus the algorithm implemented will rewards individuals for being further from the desired image. To fix this, the fitness function is simply multiplied by $-1$:\
+$$\text{fit}=-\sum_{i}^x \sum_{j}^y d_{ij}$$
 
 ### Mutation
 
