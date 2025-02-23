@@ -25,6 +25,10 @@ ggdraw() +
   draw_image(as.raster(result[[1]]$data))
 #the diff in fitness vals between best and 1st non-retained individual are lower in low pop count; less diverse pop
 
+#can be used to continue iterating from a population object (NOT run for the sample example, the below line is provided as a simple example)
+result2 <- evol_img_approx(ref, result, 200, 50, n_iterations = 5000, iters_done=5000, pixel_wise = FALSE, m_rate = 0.05, sigma = 0.005, cross_rate = 0.05, lamarck_iters = 200)
+
+
 #can combine images to make a gif, but pretty computationally expensive
 #imgs <- list.files("frames", full.names = TRUE)
 #img_list <- lapply(imgs, image_read)
