@@ -45,7 +45,7 @@ The fitness function is designed to reach an optimum when the proposed image and
 
 Note that each pixel is a 3d vector/point in rgb space. Thus we can quantify how similar each pixel is to its respective pixel in the reference image using the euclidean distance function. The pixel-wise distance is:
 
-$$d_{ij} = \sqrt{\left( r_{ij} - r^0_{ij} \right)^2 + \left( g^0_{ij} - g_0 \right)^2 + \left( b - b^0_{ij} \right)^2}$$
+$$d_{ij} = \sqrt{\left( r_{ij} - r^0_{ij} \right)^2 + \left( g_{ij} - g^0_{ij} \right)^2 + \left( b - b^0_{ij} \right)^2}$$
 
 where $r_{ij}$, $g_{ij}$, $b_{ij}$ are the respective r, g, and b values of the pixel at position $i,j$ in the proposed image and $r^0_{ij}$, $g^0_{ij}$, $b^0_{ij}$ are the r, g, and b values of the matching pixel in the reference image. As the rgb values of the pixel between the proposed and reference image get closer, this distance decreases. The fitness function is the sum of this distance over all pixels, i.e.\
 
