@@ -37,6 +37,7 @@ Frames for the animation are produced by rendering the best individual in the po
 * Every 20 iterations for first 240 iterations
 * Then every 40 iterations until iteration 1000
 * Then every 60 iterations thereafter
+
 This is because convergence usually slows over time.
 
 ### Fitness Function
